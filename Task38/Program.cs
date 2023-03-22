@@ -6,7 +6,7 @@
     }
 }
 
-double SumMinMax (double[] col) //Сложение мин и мах числа в массиве
+double DiffMinMax (double[] col) //Разница мак и мин числа в массиве
 {
     double min =col[0];
     double max=col[0];
@@ -17,8 +17,8 @@ double SumMinMax (double[] col) //Сложение мин и мах числа �
         if (col[i]>max)
             max=col[i];
     }
-    double sum=min+max;
-    return sum;
+    double diff=max-min;
+    return diff;
 }
 
 
@@ -27,7 +27,7 @@ Console.Clear();
 double[] arr=new double[5];
 InputArrayDouble(arr);
 Console.WriteLine($"[{String.Join(" ",arr)}]");
-Console.WriteLine(Math.Round(SumMinMax(arr),2));
+Console.WriteLine(Math.Round(DiffMinMax(arr),2));
 
 
 
